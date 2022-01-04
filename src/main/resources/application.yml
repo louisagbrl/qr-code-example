@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: qr-code
+  activemq:
+    broker-url: nio://10.173.3.11:16161
+    password: amala2019
+    username: admin
+  datasource:
+    cloudSqlInstance: amala-stg:asia-southeast1:amadbstg
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: amala2019
+    socketFactory: com.google.cloud.sql.mysql.SocketFactory
+    url: jdbc:mysql://localhost:9999/amala_db
+    useSSL: false
+    username: amala
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect

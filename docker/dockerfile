@@ -1,0 +1,9 @@
+# Alpine Linux with OpenJDK JRE
+FROM openjdk:8-jre-alpine
+# copy WAR into image
+COPY /qrcode-example.jar /qrcode-example.jar
+# run application with this command line[
+CMD ["java", "-jar", "/qrcode-example.jar"]
+RUN apk add --no-cache tzdata
+ENV TZ=Asia/Jakarta
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
